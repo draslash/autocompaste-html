@@ -32,61 +32,129 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-md-8 col-md-offset-2">
+                <div class="col-md-8 col-md-offset-1">
                     <h1>Pre-Experiment Questionnaire</h1>
                     <hr>
-                    <p>This part of the interface collects whatever pre-experiment information. Please come up with a basic questionnaire to help you to gather participant information. The purpose of this questionnaire is to report the participant data and convince readers that you have picked an appropriate target user group and the result has certain generalizability.</p>
-
+                    <p>Please answer the following questions.</p>
                     <p>Please put all information needed for participant: <span class="js-pid pid"></span></p>
-
                     <form id="pre-expt-form">
-                        <div class="form-group">
-                            <label for="q1">Question 1 - Text</label>
-                            <input type="text" class="form-control" id="q1" name="q1" placeholder="Enter answer">
-                        </div>
-                        <div class="form-group">
-                            <label for="q2">Question 2 - Radio</label>
-                            <div class="radio">
-                              <label>
-                                <input type="radio" name="q2" id="optionsRadios1" value="radio1">
-                                Radio response 1
-                              </label>
-                            </div>
-                            <div class="radio">
-                              <label>
-                                <input type="radio" name="q2" id="optionsRadios2" value="radio2">
-                                Radio response 2
-                              </label>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="q3">Question 3 - Checkbox</label>
-                            <div class="checkbox">
-                              <label>
-                                <input type="checkbox" name="q3" value="checkbox1">
-                                Checkbox response 1
-                              </label>
-                            </div>
-                            <div class="checkbox">
-                              <label>
-                                <input type="checkbox" name="q3" value="checkbox2">
-                                Checkbox response 2
-                              </label>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="q4">Question 4 - Select Options</label>
-                            <select class="form-control" name="q4">
-                                <option value="option1">Option response 1</option>
-                                <option value="option2">Option response 2</option>
-                                <option value="option3">Option response 3</option>
-                                <option value="option4">Option response 4</option>
-                                <option value="option1">Option response 5</option>
+						<div class="form-group">
+                            <label for="q1">Question 1 - Please choose your age range.</label>
+                            <select class="form-control" name="q1">
+								<option value="placeholder">--Select Answer--</option>
+                                <option value="Children">6-12</option>
+                                <option value="Teenagers">13-18</option>
+                                <option value="Young Adults">19-25</option>
+                                <option value="Adults">26-40</option>
+                                <option value="Older Adults">41-60</option>
+								<option value="Senior Citizens">60-80</option>
                             </select>
                         </div>
+						<div class="form-group">
+                            <label for="q2">Question 2 - How long have you been using a computer for?</label>
+                            <select class="form-control" name="q2">
+								<option value="placeholder">--Select Answer--</option>
+                                <option value="0-6 months">0-6 months</option>
+                                <option value="6 months-1 year">6 months-1 year</option>
+                                <option value="1-3 years">1-3 years</option>
+                                <option value="3-5 years">3-5 years</option>
+                                <option value="More than 5 years">More than 5 years</option>
+                            </select>
+                        </div>
+						<div class="form-group">
+                            <label for="q3">Question 3 - Have you ever used AutoCompaste before?</label>
+                            <div class="radio">
+                              <label>
+                                <input type="radio" name="q3" id="optionsRadios1" value="Yes">
+                                Yes
+                              </label>
+                            </div>
+                            <div class="radio">
+                              <label>
+                                <input type="radio" name="q3" id="optionsRadios2" value="No">
+                                No
+                              </label>
+                            </div>
+                        </div>
+						<p>If answer for Question 3 is No, skip to question 5.
+						<div class="form-group">
+                            <label for="q4">Question 4 - How do you feel AutoCompaste compares to the traditional way?</label>
+                            <div class="radio">
+                              <label>
+                                <input type="radio" name="q4" id="optionsRadios3" value="AutoCompaste is better to use compared to the traditional way.">
+                                AutoCompaste is better to use compared to the traditional way.
+                              </label>
+                            </div>
+                            <div class="radio">
+                              <label>
+                                <input type="radio" name="q4" id="optionsRadios4" value="The traditional way is better to use compared to the AutoComPaste way.">
+                                The traditional way is better to use compared to the AutoComPaste way.
+                              </label>
+                            </div>
+							<div class="radio">
+                              <label>
+                                <input type="radio" name="q4" id="optionsRadios5" value="Both are similar.">
+                                Both are similar.
+                              </label>
+                            </div>
+                        </div>
                         <div class="form-group">
-                            <label for="q5">Question 5 - Textarea</label>
-                            <textarea class="form-control" id="q5" name="q5" placeholder="Enter response"></textarea>
+                            <label for="q5">Question 5 - Select the options that best suit your experience with copying and pasting using Ctrl C - Ctrl V.</label>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" name="q5" value="Ctrl C - Ctrl V is slow">
+                                Ctrl C - Ctrl V is slow
+                              </label>
+                            </div>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" name="q5" value="There is too much time taken to check exactly where is the text needed to be copied and pasted.">
+                                There is too much time taken to check exactly where is the text needed to be copied and pasted.
+                              </label>
+							</div>
+							<div class="checkbox">
+                              <label>
+                                <input type="checkbox" name="q5" value="It is hard to select and copy when font size is small">
+                                It is hard to select and copy when font size is small
+                              </label>
+							</div>
+                        </div>
+						<div class="form-group">
+                            <label for="q6">Question 6 - Please rate how comfortable you are using Ctrl C- Ctrl V with 1 being the lowest and 5 being the highest?</label>
+                            <div class="radio">
+                              <label>
+                                <input type="radio" name="q6" id="optionsRadios6" value="1">
+                                1
+                              </label>
+                            </div>
+                            <div class="radio">
+                              <label>
+                                <input type="radio" name="q6" id="optionsRadios7" value="2">
+                                2
+                              </label>
+                            </div>
+							<div class="radio">
+                              <label>
+                                <input type="radio" name="q6" id="optionsRadios8" value="3">
+                                3
+                              </label>
+                            </div>
+							<div class="radio">
+                              <label>
+                                <input type="radio" name="q6" id="optionsRadios9" value="4">
+                                4
+                              </label>
+                            </div>
+							<div class="radio">
+                              <label>
+                                <input type="radio" name="q6" id="optionsRadios10" value="5">
+                                5
+                              </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="q7">Question 7 - Any further suggestions that you would wish to have to improve the traditional way of copying and pasting text?</label>
+                            <textarea class="form-control" id="q7" name="q7" placeholder="Enter response"></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary btn-lg">Submit</button>
                     </form>

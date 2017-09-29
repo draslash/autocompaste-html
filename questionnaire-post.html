@@ -32,60 +32,100 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-md-8 col-md-offset-2">
+                <div class="col-md-8 col-md-offset-1">
                     <h1>Post-Experiment Questionnaire</h1>
                     <hr>
-                    <p>This part of the interface collects whatever post-experiment information. After the experiment, you want to collect more qualitative and quantitative feedback about the tested techniques. Some of the typical questions include, personal preferences, any difficulties participants experienced in the experiment, and areas of improvement. Please design a basic post-experimental questionnaire (no more than 10 questions).</p>
 
                     <p>Current participant: <span class="js-pid pid"></span></p>
 
                     <form id="post-expt-form">
-                        <div class="form-group">
-                            <label for="q1">Question 1 - Text</label>
-                            <input type="text" class="form-control" id="q1" name="q1" placeholder="Enter answer">
-                        </div>
-                        <div class="form-group">
-                            <label for="q2">Question 2 - Radio</label>
+						<div class="form-group">
+                            <label for="q1">Question 1 - How did you feel about AutoComPaste?</label>
                             <div class="radio">
                               <label>
-                                <input type="radio" name="q2" id="optionsRadios1" value="radio1">
-                                Radio response 1
+                                <input type="radio" name="q1" id="optionsRadios1" value="It was better compared to the traditional way of copying and pasting">
+                                It was better compared to the traditional way of copying and pasting
                               </label>
                             </div>
                             <div class="radio">
                               <label>
-                                <input type="radio" name="q2" id="optionsRadios2" value="radio2">
-                                Radio response 2
+                                <input type="radio" name="q1" id="optionsRadios2" value="It is worse compared to the traditional way of copying and pasting">
+                                It is worse compared to the traditional way of copying and pasting
+                              </label>
+                            </div>
+							<div class="radio">
+                              <label>
+                                <input type="radio" name="q1" id="optionsRadios3" value="There is not much difference between both the traditional way and AutoCompaste">
+                                There is not much difference between both the traditional way and AutoCompaste
                               </label>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="q3">Question 3 - Checkbox</label>
+                            <label for="q2">Question 2 - Please explain why in more detail below.</label>
+                            <input type="text" class="form-control" id="q2" name="q2" placeholder="Enter answer">
+                        </div>
+                        <div class="form-group">
+                            <label for="q3">Question 3 - On a scale of 1-5 with 1 favouring Traditional Copying and Pasting the most and 5 favouring AutoCompaste technique the most, rate the 2 techniques.</label>
+                            <div class="radio">
+                              <label>
+                                <input type="radio" name="q3" id="optionsRadios4" value="1">
+                                1
+                              </label>
+                            </div>
+                            <div class="radio">
+                              <label>
+                                <input type="radio" name="q3" id="optionsRadios5" value="2">
+                                2
+                              </label>
+                            </div>
+							<div class="radio">
+                              <label>
+                                <input type="radio" name="q3" id="optionsRadios6" value="3">
+                                3 
+                              </label>
+                            </div>
+							<div class="radio">
+                              <label>
+                                <input type="radio" name="q3" id="optionsRadios7" value="4">
+                                4
+                              </label>
+                            </div>
+							<div class="radio">
+                              <label>
+                                <input type="radio" name="q3" id="optionsRadios8" value="5">
+                                5
+                              </label>
+                            </div>
+                        </div>
+						<div class="form-group">
+                            <label for="q4">Question 4 - Please select the options that best describe your experience using AutoCompaste.</label>
                             <div class="checkbox">
                               <label>
-                                <input type="checkbox" name="q3" value="checkbox1">
-                                Checkbox response 1
+                                <input type="checkbox" name="q4" value="AutoCompaste is intuitive(it is able to search for phrases/sentences/paragraphs correctly)">
+                                AutoCompaste is intuitive(it is able to search for phrases/sentences/paragraphs correctly)
                               </label>
                             </div>
                             <div class="checkbox">
                               <label>
-                                <input type="checkbox" name="q3" value="checkbox2">
-                                Checkbox response 2
+                                <input type="checkbox" name="q4" value="AutoCompaste is easier to use compared to the traditional way of copying and pasting">
+                                AutoCompaste is easier to use compared to the traditional way of copying and pasting
                               </label>
-                            </div>
+							</div>
+							<div class="checkbox">
+                              <label>
+                                <input type="checkbox" name="q4" value="AutoCompaste feels faster compared to the traditional way of copying and pasting">
+                                AutoCompaste feels faster compared to the traditional way of copying and pasting
+                              </label>
+							</div>
+							<div class="checkbox">
+                              <label>
+                                <input type="checkbox" name="q4" value="I would use AutoCompaste if it is supported fully(integrated with MS Word, in Internet browsers..)">
+                                I would use AutoCompaste if it is supported fully(integrated with MS Word, in Internet browsers..)
+                              </label>
+							</div>
                         </div>
                         <div class="form-group">
-                            <label for="q4">Question 4 - Select Options</label>
-                            <select class="form-control" name="q4">
-                                <option value="option1">Option response 1</option>
-                                <option value="option2">Option response 2</option>
-                                <option value="option3">Option response 3</option>
-                                <option value="option4">Option response 4</option>
-                                <option value="option1">Option response 5</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="q5">Question 5 - Textarea</label>
+                            <label for="q5">Question 5 - Please state any issues that you have faced while using AutoCompaste.</label>
                             <textarea class="form-control" id="q5" name="q5" placeholder="Enter response"></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary btn-lg">Submit</button>

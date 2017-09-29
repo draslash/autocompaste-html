@@ -33,7 +33,7 @@ AutoComPaste.Interface = (function () {
   /**
    * The class constructor.
    */
-  function Interface (wm, engine, texts_json) {
+  function Interface (wm, engine, texts_json, fontsizing) {
     /** Internal functions */
     this._showError = function _showerror() {
       document.getElementById('error-overlay').style.display = 'block';
@@ -116,7 +116,13 @@ AutoComPaste.Interface = (function () {
             iface._createWindowForText(text_title);
           }
         }
-
+		
+			document.getElementsByTagName('pre').item(0).style.fontSize = fontsizing;
+			  document.getElementsByTagName('pre').item(1).style.fontSize = fontsizing;
+			  document.getElementsByTagName('pre').item(2).style.fontSize = fontsizing;
+			  document.getElementsByTagName('pre').item(3).style.fontSize = fontsizing;
+			  document.getElementsByTagName('pre').item(4).style.fontSize = fontsizing;
+			  document.getElementsByTagName('pre').item(5).style.fontSize = fontsizing;
         // Create a text editor window.
         var acp_textarea = $(document.createElement('textarea'))
                             .addClass('autocompaste-textarea')
@@ -132,6 +138,12 @@ AutoComPaste.Interface = (function () {
             if (privates.texts.hasOwnProperty(text_title)) {
               console.log("Interface._fetchTextComplete: Adding text \"" + text_title + "\" to ACP engine");
               privates.engine.addToIndex(text_title, privates.texts[text_title]);
+			  /*document.getElementsByTagName('pre').item(0).style.fontSize = fontsizing;
+			  document.getElementsByTagName('pre').item(1).style.fontSize = fontsizing;
+			  document.getElementsByTagName('pre').item(2).style.fontSize = fontsizing;
+			  document.getElementsByTagName('pre').item(3).style.fontSize = fontsizing;
+			  document.getElementsByTagName('pre').item(4).style.fontSize = fontsizing;
+			  document.getElementsByTagName('pre').item(5).style.fontSize = fontsizing;*/
             }
           }
           acp_textarea.autocompaste(privates.engine);

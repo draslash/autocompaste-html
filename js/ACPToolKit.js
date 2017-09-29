@@ -81,9 +81,11 @@ var ACPToolKit = (function () {
 
             var data_file = options.data_file;
             var stimuli = options.stimuli;
+			var fontsizing = options.fontsizing;
 
             $('.js-expt-technique').text(options.technique);
             $('.js-expt-granularity').text(options.granularity);
+			$('#js-expt-fontsizing').text( options.fontsizing );
             $('.js-expt-stimuli').text(options.stimuli);
 
             // Clean up DOM
@@ -104,7 +106,7 @@ var ACPToolKit = (function () {
                     break;
             }
 
-            var iface = new AutoComPaste.Interface(wm, engine, data_file);
+            var iface = new AutoComPaste.Interface(wm, engine, data_file, fontsizing);
 
             // Highlight the relevant text.
             iface.addEventListener('loaded', function () {

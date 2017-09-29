@@ -413,6 +413,8 @@ var WindowManager = (function () {
       $(privates.windows[name].struct)
         .find('.modal-body')
         .append(content);
+		//content.css("font-size", 16);
+		
     };
 
     /**
